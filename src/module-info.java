@@ -1,0 +1,9 @@
+/**
+ * 
+ */
+/**
+ * @author confluxsys
+ *
+ */
+module DataStructure {
+}
