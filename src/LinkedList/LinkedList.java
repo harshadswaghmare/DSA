@@ -23,7 +23,7 @@ public class LinkedList {
 		Node newnode = new Node(data);
 		newnode.next = head;
 		head = newnode;
-			}
+	}
 
 	public void addlast(String data) {
 		Node newnode = new Node(data);
@@ -97,6 +97,25 @@ public class LinkedList {
 	    return size;
 	}
 	
+	public void search(String value)
+	{
+		if(head == null)
+		{
+			System.out.println("list is empty");
+		
+		}
+		  Node first = head;
+	   while(first.data != value )
+      {
+    	
+    	 first = first.next;
+
+      }
+      System.out.println(value  +" Successfully found");
+		  
+		
+	}
+	
 	
 	public static void main(String[] args) {
 		LinkedList ll = new LinkedList();
@@ -110,8 +129,8 @@ public class LinkedList {
 		ll.print();
 		ll.deletelast();
 		ll.print();
-		ll.print();
-		ll.getsize();
+		ll.search("is");
+		
 		
 		
 	}
