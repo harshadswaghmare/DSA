@@ -48,17 +48,20 @@ class Array{
 		Scanner sc = new Scanner(System.in);
 		System.out.println("Enter the size of list");
 		int size= sc.nextInt();
+		System.out.println("enter the element that you want");
 		ArrayList<String>list = new ArrayList<>();
 		for(int i=0 ;i<size+1;i++)
 		{
 			list.add(sc.nextLine());
 			
 		}
-		System.out.println("List Elements are :");
+		System.out.println("Element that you entered into the list are :");
 		for(String elements : list)
 		{
-			System.out.print(elements + " ");
+			System.out.println(elements);
 		}
+		
+		
 	}
 }
 
