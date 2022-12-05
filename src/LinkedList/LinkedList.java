@@ -3,7 +3,9 @@ package LinkedList;
 public class LinkedList {
 	Node head;
 	private int size;
-	LinkedList(){
+	String data;
+
+	LinkedList() {
 		this.size = 0;
 	}
 
@@ -18,11 +20,10 @@ public class LinkedList {
 		}
 	}
 
-
 	public void addFirst(String data) {
 		Node newnode = new Node(data);
 		newnode.next = head;
-		head = newnode;
+		head = newnode; 
 	}
 
 	public void addlast(String data) {
@@ -35,6 +36,7 @@ public class LinkedList {
 			currnode = head;
 		}
 		currnode.next = newnode;
+		
 	}
 
 	public void print() {
@@ -48,78 +50,82 @@ public class LinkedList {
 
 		System.out.println("null");
 	}
-	
-	public void delete()
-	{
 
-	 if (head == null)    //when list is empty;
-	 {
-		System.out.println("List is empty");
-		return;
-		
-	 }
-	  size--;
-	   head = head.next;  
-	   
-	    
+	public void delete() {
+
+		if (head == null) // when list is empty;
+		{
+			System.out.println("List is empty");
+			return;
+
+		}
+		size--;
+		head = head.next;
+
 	}
-	
-	public void deletelast()
-	{
+
+	public void deletelast() {
 		if (head == null) // when there is no node in the list
 		{
 			System.out.println("list is empty");
-			
+
 		}
 		size--;
-		if (head.next == null)   //when there is only one node in list
+		if (head.next == null) // when there is only one node in list
 		{
-		    head = null;
+			head = null;
 		}
-		
+
 		Node secondlast = head;
 		Node last = head.next;
-		while(last.next != null)
-		{
+		while (last.next != null) {
 			secondlast = secondlast.next;
 			last = last.next;
-			
+
 		}
 		secondlast.next = null;
 		System.out.println("last node is deleted successfully");
 	}
 
-	
-
-	public int getsize()
-	{ 
+	public int getsize() {
 		System.out.println("in a get size method");
-	    return size;
+		return size;
 	}
-	
-	public void search(String value)
-	{
-		if(head == null)
-		{
-			System.out.println("list is empty");
-		
-		}
-		  Node first = head;
-	   while(first.data != value )
-      {
-    	
-    	 first = first.next;
 
-      }
-      System.out.println(value  +" Successfully found");
-		  
+	public void search(String data) {
+
+		Node current = head;
+
+		int i = 1;
+
+		boolean flag = false;
+		if (head == null) {
+			System.out.println("List is empty");
+		}
+
+		else {
+			while (current != null) {
+				if (current.data == data) {
+					flag = true;
+					break;
+				}
+				i++;
+				current = current.next;
+			}
+		}
 		
+		if(flag)
+		{
+			System.out.println("Element is found at position"+ i);
+		}
+		else {
+			System.out.println("Element is not found in the list, search again");
+		}
 	}
-	
-	
+
 	public static void main(String[] args) {
 		LinkedList ll = new LinkedList();
-		
+
 		ll.addFirst("Harshad");
 		ll.addFirst("is");
 		ll.addFirst("name");
@@ -129,12 +135,8 @@ public class LinkedList {
 		ll.print();
 		ll.deletelast();
 		ll.print();
-		ll.search("is");
-		
-		
-		
+		ll.search("Name");
+
 	}
-	
-	
 
 }

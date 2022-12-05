@@ -6,6 +6,7 @@ import java.util.*;
 		static int arr[];
 	    static int size;
 		static int rear;
+		
 	
 	 Queue(int size)
 	{

@@ -3,6 +3,36 @@ package ArrayList;
 import java.util.ArrayList;
 import java.util.Scanner;
 
+
+
+
+
+class Array{
+	public static void main(String []args)
+	{
+		Scanner sc = new Scanner(System.in);
+		System.out.println("Enter the size of list");
+		int size= sc.nextInt();
+		System.out.println("enter the element that you want");
+		ArrayList<String>list = new ArrayList<>();
+		for(int i=0 ;i<size+1;i++)
+		{
+			list.add(sc.nextLine());
+			
+		}
+		System.out.println("Element that you entered into the list are :");
+		for(String elements : list)
+		{											//Traversing the list
+													// list of elements.
+			System.out.println(elements);
+		}
+		
+		
+	}
+}
+
+
+//Here we can create Array implementation also
 /*public class Array {
 
 
@@ -21,9 +51,15 @@ public static void main(String []args)
   {
     	al.add(sc.nextLine());
     	
+    	
+    	
   }
+  
+  //For array 
+   
   for(int i =0;i <= str ;i++)
   {
+  
 	  ab[i]= sc.nextInt();
     	
   }
@@ -42,29 +78,3 @@ public static void main(String []args)
 }
 }
 */
-class Array{
-	public static void main(String []args)
-	{
-		Scanner sc = new Scanner(System.in);
-		System.out.println("Enter the size of list");
-		int size= sc.nextInt();
-		System.out.println("enter the element that you want");
-		ArrayList<String>list = new ArrayList<>();
-		for(int i=0 ;i<size+1;i++)
-		{
-			list.add(sc.nextLine());
-			
-		}
-		System.out.println("Element that you entered into the list are :");
-		for(String elements : list)
-		{
-			System.out.println(elements);
-		}
-		
-		
-	}
-}
-
-
-
-

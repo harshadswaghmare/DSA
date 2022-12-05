@@ -5,7 +5,6 @@ import java.util.Scanner;
 public class Sorting {
 
 	// Bubble sort
-
 	public static void bubbleSort(int arr[]) {
 		for (int i = 0; i < arr.length - 1; i++) {
 
@@ -25,7 +24,6 @@ public class Sorting {
 	}
 
 	// selection sort
-
 	public static void selectionSort(int[] arr) {
 		for (int i = 0; i < arr.length - 1; i++)
 
@@ -46,6 +44,7 @@ public class Sorting {
 		}
 	}
 
+	
 	// Print array
 	public static void printarray(int[] arr) {
 		for (int i = 0; i < arr.length; i++) {
@@ -59,15 +58,14 @@ public class Sorting {
 		int a = sc.nextInt();
 		int[] arr = new int[a];
 		int i = 0;
-		System.out.println("enter the no into the array" + ",");
+		System.out.println("enter the no into the array");
 		for (i = 0; i < arr.length; i++) // adding the element into the array
 		{
 			arr[i] = sc.nextInt();
 
 		}
 
-		// print array elements
-
+		// print array elements Before sorting
 		System.out.println("Before sorting array elements are:");
 		for (int elements : arr) {
 			System.out.print(elements + " ");

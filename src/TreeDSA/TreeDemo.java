@@ -67,6 +67,29 @@ public class TreeDemo {
 			System.out.println(node.value + " ");
 		}
 	}
+	
+	public void delete(Node node, int data)
+	{
+	
+		if(node == null)
+		{
+			System.out.println("list is empty");
+		}
+		try {
+		while(node.left != null)
+		{
+			node.left = node;
+			return;
+			
+		}
+		node.left = null;
+		
+		
+	}catch(Exception e)
+		{
+		System.out.println("Something went wrong  " +e);
+		}
+	}
 
 	public static void main(String[] args) {
 		TreeDemo obj = new TreeDemo();
@@ -75,9 +98,13 @@ public class TreeDemo {
 		obj.insertdata(root, 10);
 		obj.insertdata(root, 11);
 		obj.insertdata(root, 4);
-		System.out.println("values are");
+		
+		System.out.println("Inorder values are");
 		obj.inorder(root);
 		System.out.println("values of tree in preorder format");
+		obj.preorder(root);
+		System.out.println("values after delelte one leaf node");
+		//obj.delete(root,4);
 		obj.preorder(root);
 	}
 
